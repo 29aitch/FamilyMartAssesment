@@ -22,6 +22,23 @@ This script queries the Google Places API to fetch store locations (name, addres
 | Pandas           | Data manipulation & CSV export   |
 | Google Places API| Location data retrieval          |
 
+## ❌ Why Not Use BeautifulSoup?
+We deliberately chose **not to use web scraping libraries like BeautifulSoup** because:
+
+| Factor                | API Approach                          | BeautifulSoup Approach              |
+|-----------------------|---------------------------------------|-------------------------------------|
+| **Data Structure**    | Clean JSON responses                  | HTML parsing required               |
+| **Reliability**       | Official API documentation            | Fragile to layout changes           |
+| **Maintenance**       | Stable interface                      | Frequent selector updates needed    |
+| **Legality**          | Complies with Google's ToS            | Risk of anti-scraping measures      |
+| **Performance**       | Direct data access                    | Extra parsing overhead              |
+
+Key reasons:
+- **Structured Data**: The Google Places API returns clean JSON, eliminating HTML parsing needs
+- **Official Support**: API is maintained by Google with version control
+- **Rate Limiting**: Built-in quota management vs potential IP blocking
+- **Accuracy**: Guaranteed fresh data from primary source
+
 ## 🚀 Steps to Reproduce
 
 1. **Clone the Repository:**
@@ -35,8 +52,8 @@ This script queries the Google Places API to fetch store locations (name, addres
    - Create API key under "Credentials"
 
 3. **Configure Script**
-   ```python
-   API_KEY = "YOUR_API_KEY_HERE"  # Replace with your key
+    ```python
+     API_KEY = "YOUR_API_KEY_HERE"  # Replace with your key
 Install Dependencies
 
       ```bash
@@ -46,9 +63,9 @@ Run Script
     ```bash
        python store_scraper.py
 
-Output:
-Results saved to store_locations.csv
-Columns: Brand, Store Name, Address, Latitude, Longitude
+   Output:
+   Results saved to store_locations.csv
+   Columns: Brand, Store Name, Address, Latitude, Longitude
 
 🚨 Challenges & Solutions
 Challenge	Solution
