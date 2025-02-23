@@ -48,18 +48,18 @@ The solution is structured into several key steps:
    
 2. Install Python Dependencies: Ensure you have Python 3.10 installed. Install the required packages:
 
-   **_bash
-   pip install numpy torch opencv-python opencv-contrib-python cvzone ultralytics_**
+   ```bash
+   pip install requirement.txt
 
-   For detailed PyTorch installation instructions, visit the PyTorch website.
+For detailed PyTorch installation instructions, visit the PyTorch website.
 
 3. Install SORT: SORT is not available via PyPI and must be installed from GitHub:
 
    Clone the SORT repository:
-  ** bash
-   git clone https://github.com/abewley/sort.git**__
-   
-   Copy the sort.py file from the cloned repository into your project directory or add the SORT repository to your Python path.
+   ```bash
+   git clone https://github.com/abewley/sort.git
+
+Copy the sort.py file from the cloned repository into your project directory or add the SORT repository to your Python path.
    Alternatively, you can install it directly if a setup file is available, or manually include the file in your project.
    
 4. Prepare Input Files:
@@ -68,8 +68,8 @@ The solution is structured into several key steps:
    Add the mask image mask.png (if using a mask).
    Download the YOLOv8 model weights (yolov8l.pt) from the Ultralytics YOLO website and place it in the same directory.
    Run the Application: Execute the main script:
-**  _ bash
-   python main.py_**
+   ```bash
+   python main.py
    
 5. A window will display the video stream with the overlay of detections, tracking IDs, and the vehicle count.
 
