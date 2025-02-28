@@ -1,6 +1,0 @@
-cvzone==1.6.1
-opencv-python=4.11.0.86
-scikit-image==0.25.2
-torch==2.6.0
-ultralytics==8.3.78
-yt-dlp==2025.2.19
